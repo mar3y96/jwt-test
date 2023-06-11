@@ -6,8 +6,8 @@ use Illuminate\Http\Request;
 use App\Http\Services\UserService;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
-use App\Http\Requests\Api\loginUserRequest;
-use App\Http\Requests\Api\RegisterUserRequest;
+use App\Http\Requests\Auth\loginUserRequest;
+use App\Http\Requests\Auth\RegisterUserRequest;
 
 class AuthController extends Controller
 {

@@ -1,8 +1,10 @@
 <?php
 
-namespace App\Http\Requests\Api;
+namespace App\Http\Requests\Auth;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Contracts\Validation\Validator;
+use Illuminate\Http\Exceptions\HttpResponseException;
 
 class RegisterUserRequest extends FormRequest
 {
@@ -48,5 +50,16 @@ class RegisterUserRequest extends FormRequest
         return [
             'password.regex' => 'The password must contain at least one uppercase letter, one lowercase letter, one digit, and one special character.',
         ];
+    }
+    
+    protected function failedValidation(Validator $validator)
+    {
+        if ($validator->fails()) {
+            throw new HttpResponseException(response()->json([
+                'status' => 'error',
+                'errors'=>$validator->errors()->all(),
+                'message' => 'Unauthorized',
+            ], 401));
+        }
     }
 }

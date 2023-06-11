@@ -31,12 +31,12 @@ class UserService
     public function login($data)
     {
         $token = Auth::attempt($data);
-        if (!$token) {
+        if (!$token)
             throw new HttpResponseException(response()->json([
                 'status' => 'error',
                 'message' => 'Unauthorized',
             ], 401));
-        }
+
         $user = Auth::user();
         return ['token' => $token, 'user' => $user];
     }
