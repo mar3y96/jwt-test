@@ -9,7 +9,7 @@
 ## run open project in browser you can just run**php artisan serve**to serve your project
 ## add your serve url to url variable in environment
 ## select the imported environment
-# Now you can test the project by useing the collection or running **php artisan test**
+# Now you can test the project by useing the collection or running **php artisan test** to run laravel test
 
 
 # Php Requirements 
