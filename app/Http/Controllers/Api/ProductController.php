@@ -51,6 +51,7 @@ class ProductController extends Controller
     {
         return response()->json([
             'success' => true,
+            'message' => 'product data',
             'data' => new ProductResource($product),
         ]);
     }
@@ -73,10 +74,10 @@ class ProductController extends Controller
      */
     public function destroy(Product $product)
     {
-       $this->productService->delete($product); 
+       $this->productService->delete($product);
         return response()->json([
             'success' => true,
             'message' => 'Product deleted successfully',
-        ]);
+        ],204);
     }
 }

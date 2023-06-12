@@ -21,7 +21,7 @@ class AuthController extends Controller
 
     public function register(RegisterUserRequest $request)
     {
-        
+
         $data = $this->userService->register($request->validated());
         return response()->json([
             'status' => 'success',
@@ -31,7 +31,7 @@ class AuthController extends Controller
                 'token' => $data['token'],
                 'type' => 'bearer',
             ]
-        ]);
+        ],201);
     }
 
     public function login(loginUserRequest $request)
