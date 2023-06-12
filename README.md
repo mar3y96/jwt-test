@@ -7,7 +7,8 @@
 ## run **php artisan migrate**
 ## import postman collection and environment from postman folder
 ## run open project in browser you can just run**php artisan serve**to serve your project
-## add your serve url to url variable 
+## add your serve url to url variable in environment
+## select the imported environment
 # Now you can test the project by useing the collection or running **php artisan test**
 
 
