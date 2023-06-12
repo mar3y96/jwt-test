@@ -2,7 +2,7 @@
 ## run  **composer install** 
 ##  run  **cp  .env.example .env**
 ##  run **php artisan key:generate**
-##  run**php artisan jwt:secret**
+##  run **php artisan jwt:secret**
 ### create your own database and add it to .env file
 ## run **php artisan migrate**
 ## import postman collection and environment from postman folder
