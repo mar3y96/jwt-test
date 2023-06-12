@@ -9,3 +9,7 @@
 ## run open project in browser you can just run**php artisan serve**to serve your project
 ## add your serve url to url variable 
 # Now you can test the project by useing the collection or running **php artisan test**
+
+
+# Php Requirements 
+## php 8.1 - 8.2
